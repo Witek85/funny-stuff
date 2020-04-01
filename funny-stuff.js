@@ -7,8 +7,10 @@
             "color": "green",
             "text": "test text lol"
         }
-        
-        $.extend( defaults, settings );
+
+        if (typeof settings == 'object') {
+            $.extend( defaults, settings );
+        }
         console.log(defaults)
 
         this.css( "background", defaults.color );
